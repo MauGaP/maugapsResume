@@ -38,3 +38,21 @@ function toggleCollapse() {
     content.style.display = "none";
   }
 }
+
+const values = [500, 1000, 1500];
+function getRandomValue() {
+  const randomIndex = Math.floor(Math.random() * values.length);
+  return values[randomIndex];
+}
+
+function initializeAOS() {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.setAttribute("data-aos-duration", getRandomValue());
+  });
+
+  AOS.init();
+}
+
+document.addEventListener("DOMContentLoaded", initializeAOS);

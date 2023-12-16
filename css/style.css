@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #333;
   color: #fff;
@@ -72,7 +76,8 @@ li {
 }
 
 .card {
-  box-shadow: 0 2px 12px #ff4136;
+  height: 350px;
+  position: relative;
   border-radius: 6px;
   background-color: #333;
   width: 300px;
@@ -81,8 +86,30 @@ li {
   padding: 1em;
 }
 
-.card h3 {
-  margin-top: 0;
+.card[data-aos]:hover {
+  background-color: #3b3b3b;
+  transform: scale(1.06) !important;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 6px 12px #ff4136;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.logo-container img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 10px; /* Adjust the value to suit your design */
+  width: 90%;
+  text-align: center;
 }
 
 .title {
@@ -116,6 +143,7 @@ li {
   background-color: #333;
   color: #ff4136;
   box-shadow: 0 -6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
+  transition: box-shadow 0.5s ease, background-color 1s ease;
 }
 
 #bodyHeader {
