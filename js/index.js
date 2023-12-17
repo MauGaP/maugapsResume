@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', initializeAOS);
 
 var sidebar = document.getElementById('sidebar');
 var sidebarWidth = 200;
-var collapsedWidth = '46px';
+var collapsedWidth = '50px';
 
 document.addEventListener('mousemove', function (e) {
   if (e.pageX < sidebarWidth) {
