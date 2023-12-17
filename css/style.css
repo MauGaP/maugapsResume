@@ -73,6 +73,7 @@ li {
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
+  padding: auto;
 }
 
 .content {
@@ -82,7 +83,7 @@ li {
 }
 
 .show {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   max-height: 5000px;
 }
@@ -225,20 +226,17 @@ hr.gradient {
   height: 2px;
   border: none;
   border-radius: 6px;
-  background: linear-gradient(
-    90deg,
-    rgba(13, 8, 96, 1) 0%,
-    rgba(9, 9, 121, 1) 21%,
-    rgba(6, 84, 170, 1) 51%,
-    rgba(0, 255, 113, 1) 100%
-  );
+  background: linear-gradient(90deg, #333 0%, #ff4136 50%, #333 100%);
 }
 
 h1,
-h2,
 h3,
 .title .role {
   color: #fff;
+}
+
+h2 {
+  color: #ff4136;
 }
 
 a,
