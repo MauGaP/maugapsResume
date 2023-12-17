@@ -1,15 +1,13 @@
-document.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  const title = header.querySelector("h1");
-  const particlesDiv = document.getElementById("particles-js");
+document.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  const title = header.querySelector('h1');
+  const particlesDiv = document.getElementById('particles-js');
 
-  // Calculate the scroll percentage based on the window height or another threshold
   let scrollPercent = window.scrollY / (0.15 * window.innerHeight);
-  scrollPercent = Math.min(1, scrollPercent); // Cap at 1 (100%)
+  scrollPercent = Math.min(1, scrollPercent);
 
-  // Set the styles according to the scroll position
   const opacity = scrollPercent;
-  const translateY = -100 + scrollPercent * 100; // Calculate translateY value
+  const translateY = -100 + scrollPercent * 100;
 
   header.style.backgroundColor = `rgba(43, 43, 43, ${opacity})`;
   title.style.opacity = `${opacity}`;
@@ -17,25 +15,25 @@ document.addEventListener("scroll", () => {
   particlesDiv.style.opacity = scrollPercent;
 });
 
-document.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
+document.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
   if (window.scrollY > 0) {
-    header.classList.add("scrolled");
+    header.classList.add('scrolled');
   } else {
-    header.classList.remove("scrolled");
+    header.classList.remove('scrolled');
   }
 });
 
-particlesJS.load("particles-js", "particles.json", function () {
-  console.log("particles.js loaded - callback");
+particlesJS.load('particles-js', 'particles.json', function () {
+  console.log('particles.js loaded - callback');
 });
 
 function toggleCollapse() {
-  var content = document.getElementById("collapsibleContent");
-  if (content.style.display === "none") {
-    content.style.display = "block";
+  var content = document.getElementById('collapsibleContent');
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
   } else {
-    content.style.display = "none";
+    content.style.display = 'none';
   }
 }
 
@@ -46,13 +44,27 @@ function getRandomValue() {
 }
 
 function initializeAOS() {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll('.card');
 
-  cards.forEach((card) => {
-    card.setAttribute("data-aos-duration", getRandomValue());
+  cards.forEach(card => {
+    card.setAttribute('data-aos-duration', getRandomValue());
   });
 
   AOS.init();
 }
 
-document.addEventListener("DOMContentLoaded", initializeAOS);
+document.addEventListener('DOMContentLoaded', initializeAOS);
+
+var sidebar = document.getElementById('sidebar');
+var sidebarWidth = 200;
+var collapsedWidth = '46px';
+
+document.addEventListener('mousemove', function (e) {
+  if (e.pageX < sidebarWidth) {
+    sidebar.style.width = sidebarWidth + 'px';
+    sidebar.classList.remove('collapsed');
+  } else {
+    sidebar.style.width = collapsedWidth;
+    sidebar.classList.add('collapsed');
+  }
+});

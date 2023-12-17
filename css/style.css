@@ -118,25 +118,27 @@ li {
 }
 
 #sidebar {
+  width: 46px;
+  overflow: hidden;
   font-weight: 700;
   border-right: 2px solid #ff4136;
   position: fixed;
   left: 0;
   top: 0;
-  width: 200px;
   background-color: #2b2b2b;
   height: 100%;
   z-index: 2;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  transition: width 0.5s, background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 
 #sidebar ul li a {
   text-decoration: none;
   color: #fff;
-  display: block;
+  display: flex;
   top: 160px;
   position: relative;
   padding: 10px 15px;
+  white-space: nowrap;
 }
 
 #sidebar ul li a:hover {
@@ -144,6 +146,29 @@ li {
   color: #ff4136;
   box-shadow: 0 -6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
   transition: box-shadow 0.5s ease, background-color 1s ease;
+}
+
+.nav-link:hover svg {
+  fill: #ff4136; /* Replace #color with the color you want on hover */
+}
+
+#sidebar li a i {
+  fill: #fff;
+  padding-right: 10px;
+  vertical-align: middle; /* Aligns the icon with the middle of the text */
+}
+
+#sidebar.collapsed li a span {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+#sidebar:not(.collapsed) li a span {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: visibility 0s ease 0s, opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
 }
 
 #bodyHeader {
@@ -156,7 +181,7 @@ li {
   width: 160px;
   height: 100px;
   top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
   z-index: 100; /* Higher than other elements */
 }
 
