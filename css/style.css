@@ -73,19 +73,17 @@ li {
   flex-wrap: wrap;
   gap: 1em;
   justify-content: center;
-  padding: auto;
 }
 
 .content {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 1s ease-out, padding 1s ease-out;
+  max-height: 5000px;
+  transition: max-height 1s ease-out;
 }
 
-.show {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  max-height: 5000px;
+.hidden {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1s ease-out;
 }
 
 .link {

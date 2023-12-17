@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
   collapsibles.forEach(function (collapsible) {
     collapsible.addEventListener('click', function () {
       var content = this.nextElementSibling;
-      content.classList.toggle('show');
+      content.classList.toggle('hidden');
     });
   });
 });
