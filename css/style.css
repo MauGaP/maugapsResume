@@ -75,8 +75,30 @@ li {
   justify-content: center;
 }
 
+.content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-out, padding 1s ease-out;
+}
+
+.show {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: 5000px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ff4136;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .card {
-  height: 350px;
   position: relative;
   border-radius: 6px;
   background-color: #333;
@@ -84,6 +106,10 @@ li {
   border: 1px solid #ff4136;
   margin: 0.5em;
   padding: 1em;
+}
+
+#stack .card {
+  height: 350px;
 }
 
 .card[data-aos]:hover {
@@ -193,6 +219,19 @@ li {
   left: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+hr.gradient {
+  height: 2px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 8, 96, 1) 0%,
+    rgba(9, 9, 121, 1) 21%,
+    rgba(6, 84, 170, 1) 51%,
+    rgba(0, 255, 113, 1) 100%
+  );
 }
 
 h1,
