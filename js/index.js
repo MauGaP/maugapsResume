@@ -74,8 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   collapsibles.forEach(function (collapsible) {
     collapsible.addEventListener('click', function () {
-      var content = this.nextElementSibling;
+      var content = document.getElementById('more-tools');
+      var spinner = document.getElementById('spinner');
+
+      spinner.style.display = 'block';
+
       content.classList.toggle('hidden');
+
+      setTimeout(function () {
+        spinner.style.display = 'none';
+      }, 1000);
     });
   });
 });

@@ -75,6 +75,11 @@ li {
   justify-content: center;
 }
 
+.card-container h3 {
+  margin: 0;
+  flex-grow: 1;
+}
+
 .content {
   max-height: 5000px;
   transition: max-height 1s ease-out;
@@ -101,10 +106,41 @@ li {
   position: relative;
   border-radius: 6px;
   background-color: #333;
-  width: 300px;
   border: 1px solid #ff4136;
   margin: 0.5em;
   padding: 1em;
+}
+
+.card.stack {
+  width: 300px;
+}
+
+.card.skill {
+  width: 300px;
+}
+
+.card.experience {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  padding-left: 20px;
+  height: 80%;
+  margin-right: 10px;
+  align-self: center;
+}
+
+.collapsible-container {
+  display: flex;
+  align-items: center;
+}
+
+#spinner {
+  margin-left: 10px;
+  display: none;
 }
 
 #stack .card {
