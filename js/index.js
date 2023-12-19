@@ -69,21 +69,55 @@ document.addEventListener('mousemove', function (e) {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var collapsibles = document.querySelectorAll('.collapsible');
+const selectedRepos = ['maugapsResume', 'maugapsSecretSanta', 'cypressFrameworkSeed', 'letsTalkDND', 'micka-and-mauro'];
+const username = 'MauGaP';
 
-  collapsibles.forEach(function (collapsible) {
-    collapsible.addEventListener('click', function () {
-      var content = document.getElementById('more-tools');
-      var spinner = document.getElementById('spinner');
+function createCarouselItems(username, selectedRepos) {
+  const carousel = document.getElementById('personalProjects');
 
-      spinner.style.display = 'block';
-
-      content.classList.toggle('hidden');
-
-      setTimeout(function () {
-        spinner.style.display = 'none';
-      }, 1000);
-    });
+  selectedRepos.forEach(repoName => {
+    const item = document.createElement('div');
+    item.className = 'carousel-item card';
+    const repoUrl = `https://github.com/${username}/${repoName}`;
+    const imageUrl = `./asset/project/${repoName}.png`;
+    item.innerHTML = `
+            <a class="repo-link" href="${repoUrl}" target="_blank">
+              <h3 class="repo-name">${repoName}</h3>
+              <img class="repo-image" src="${imageUrl}" alt="${repoName} Open Graph Image" />
+            </a>
+      `;
+    carousel.appendChild(item);
   });
+}
+
+createCarouselItems(username, selectedRepos);
+
+function setActiveItem(activeIndex) {
+  const items = document.querySelectorAll('.carousel-item');
+  items.forEach((item, index) => {
+    item.classList.remove('active', 'inactive', 'next', 'prev');
+    if (index === activeIndex) {
+      item.classList.add('active');
+    } else {
+      item.classList.add('inactive');
+      if (index === (activeIndex + 1) % items.length) {
+        item.classList.add('next');
+      } else if (index === (activeIndex - 1 + items.length) % items.length) {
+        item.classList.add('prev');
+      }
+    }
+  });
+}
+
+document.getElementById('personalProjects').addEventListener('click', function (event) {
+  const clickedItem = event.target.closest('.carousel-item');
+  if (clickedItem && clickedItem.classList.contains('inactive')) {
+    if (event.target.tagName === 'A' || event.target.parentElement.tagName === 'A') {
+      event.preventDefault();
+    }
+    const newActiveIndex = Array.from(clickedItem.parentElement.children).indexOf(clickedItem);
+    setActiveItem(newActiveIndex);
+  }
 });
+
+setActiveItem(0);
