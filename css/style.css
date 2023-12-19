@@ -138,6 +138,69 @@ li {
   align-items: center;
 }
 
+#personalProjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 60vh;
+}
+
+.carousel-item {
+  max-width: 600px;
+  transition: transform 0.5s, z-index 0.5s;
+  position: absolute;
+  will-change: transform, z-index, opacity;
+}
+
+.carousel-item.active {
+  transform: scale(1);
+  z-index: 2;
+  opacity: 1;
+}
+
+.carousel-item.active:hover {
+  background-color: #3b3b3b;
+  transform: scale(1.06) !important;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 6px 12px #ff4136;
+}
+
+.carousel-item.inactive {
+  transform: scale(0.4);
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.carousel-item.next,
+.carousel-item.prev {
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.carousel-item.next {
+  transform: translateX(80%) scale(0.8);
+}
+
+.carousel-item.prev {
+  transform: translateX(-80%) scale(0.8);
+}
+
+.repo-name {
+  text-align: center;
+}
+
+.repo-link {
+  text-decoration: none;
+}
+
+.repo-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 #spinner {
   margin-left: 10px;
   display: none;
@@ -168,7 +231,7 @@ li {
 
 .text-container {
   position: absolute;
-  bottom: 10px; /* Adjust the value to suit your design */
+  bottom: 20px;
   width: 90%;
   text-align: center;
 }
@@ -210,13 +273,13 @@ li {
 }
 
 .nav-link:hover svg {
-  fill: #ff4136; /* Replace #color with the color you want on hover */
+  fill: #ff4136;
 }
 
 #sidebar li a i {
   fill: #fff;
   padding-right: 10px;
-  vertical-align: middle; /* Aligns the icon with the middle of the text */
+  vertical-align: middle;
 }
 
 #sidebar.collapsed li a span {
@@ -241,9 +304,9 @@ li {
   position: fixed;
   width: 160px;
   height: 100px;
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 100; /* Higher than other elements */
+  top: 20px;
+  right: 20px;
+  z-index: 100;
 }
 
 #particles-js {
