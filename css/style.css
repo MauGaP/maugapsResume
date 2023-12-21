@@ -45,10 +45,17 @@ header.scrolled h1 {
   opacity: 100;
 }
 
+.footer-info {
+  padding-left: 220px;
+}
+
 footer {
+  justify-content: space-between;
+  padding-right: 200px;
+  padding-left: 200px;
+  align-items: right;
   background-color: #2b2b2b;
   color: #fff;
-  text-align: center;
   bottom: 0;
   padding: 1em 0;
 }
@@ -341,13 +348,13 @@ li {
   padding: 1em 0;
 }
 
+#mg-logo-container {
+  padding-right: 220px;
+}
+
 #mg-logo {
-  position: fixed;
-  width: 160px;
-  height: 100px;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
+  width: 150px;
+  height: auto;
 }
 
 #particles-js {
