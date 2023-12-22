@@ -99,28 +99,18 @@ li {
 }
 
 .highlight {
-  font-weight: bold;
-  animation: pulse 4s infinite, highlighted-text 4s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% {
-    text-shadow: 0 0 0px #ff4136;
+    text-shadow: 0 0 0px rgba(255, 65, 54, 1);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 65, 54, 1);
   }
   100% {
-    text-shadow: 0 0 20px #ff4136;
-  }
-}
-
-@keyframes highlighted-text {
-  0% {
-    color: #fff;
-  }
-  10% {
-    color: #ff4136;
-  }
-  100% {
-    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 65, 54, 0);
   }
 }
 
