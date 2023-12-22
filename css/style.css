@@ -25,7 +25,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  background: transparent;
+  background: 0 0;
   z-index: 10;
   padding: 1em 0;
 }
@@ -41,7 +41,7 @@ header h1 {
 }
 
 header.scrolled h1 {
-  transform: translateY(0%);
+  transform: translateY(0);
   opacity: 100;
 }
 
@@ -94,28 +94,30 @@ li {
 
 .hidden {
   overflow: hidden;
-  max-height: 0px;
+  max-height: 0;
   transition: max-height 1s ease-out;
 }
 
 .highlight {
-  animation: pulse 2s infinite;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
   0% {
-    text-shadow: 0 0 0px rgba(255, 65, 54, 1);
+    text-shadow: 0 0 0#ff4136;
   }
+
   50% {
-    text-shadow: 0 0 10px rgba(255, 65, 54, 1);
+    text-shadow: 0 0 10px #ff4136;
   }
-  100% {
-    text-shadow: 0 0 20px rgba(255, 65, 54, 0);
+
+  to {
+    text-shadow: 0 0 20px transparent;
   }
 }
 
 .link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -332,7 +334,7 @@ li {
 #sidebar ul li a:hover {
   background-color: #333;
   color: #ff4136;
-  box-shadow: 0 -6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
+  box-shadow: 0-6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
   transition: box-shadow 0.5s ease, background-color 1s ease;
 }
 
@@ -390,9 +392,9 @@ li {
 
 hr.gradient {
   height: 2px;
-  border: none;
+  border: 0;
   border-radius: 6px;
-  background: linear-gradient(90deg, #333 0%, #ff4136 50%, #333 100%);
+  background: linear-gradient(90deg, #333 0, #ff4136 50%, #333 100%);
 }
 
 h1,
