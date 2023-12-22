@@ -98,6 +98,32 @@ li {
   transition: max-height 1s ease-out;
 }
 
+.highlight {
+  font-weight: bold;
+  animation: pulse 4s infinite, highlighted-text 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 0px #ff4136;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff4136;
+  }
+}
+
+@keyframes highlighted-text {
+  0% {
+    color: #fff;
+  }
+  10% {
+    color: #ff4136;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
 .link {
   color: white;
   text-decoration: none;
@@ -318,6 +344,11 @@ li {
   color: #ff4136;
   box-shadow: 0 -6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
   transition: box-shadow 0.5s ease, background-color 1s ease;
+}
+
+.profile-photo {
+  border-radius: 6px;
+  border: 1px solid #ff4136;
 }
 
 .nav-link:hover svg {
