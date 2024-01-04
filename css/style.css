@@ -1,3 +1,28 @@
+@font-face {
+  font-family: zen-kaku-gothic-light;
+  src: url('/asset/font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Light.ttf');
+}
+
+@font-face {
+  font-family: zen-kaku-gothic-regular;
+  src: url('/asset/font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Regular.ttf');
+}
+
+@font-face {
+  font-family: zen-kaku-gothic-medium;
+  src: url('/asset/font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Medium.ttf');
+}
+
+@font-face {
+  font-family: zen-kaku-gothic-bold;
+  src: url('/asset/font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Bold.ttf');
+}
+
+@font-face {
+  font-family: zen-kaku-gothic-black;
+  src: url('/asset/font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Black.ttf');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,15 +30,14 @@ html {
 body {
   background-color: #333;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: zen-kaku-gothic-regular;
   margin: 0;
 }
 
 main {
   line-height: 1.6;
   margin-top: -100px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 50px;
 }
 
 header {
@@ -25,7 +49,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  background: transparent;
+  background: 0 0;
   z-index: 10;
   padding: 1em 0;
 }
@@ -41,23 +65,22 @@ header h1 {
 }
 
 header.scrolled h1 {
-  transform: translateY(0%);
+  transform: translateY(0);
   opacity: 100;
 }
 
 .footer-info {
-  padding-left: 220px;
+  padding-left: 50px;
 }
 
 footer {
+  display: flex;
   justify-content: space-between;
-  padding-right: 200px;
-  padding-left: 200px;
   align-items: right;
   background-color: #2b2b2b;
   color: #fff;
   bottom: 0;
-  padding: 1em 0;
+  padding: 1em;
 }
 
 section {
@@ -82,24 +105,44 @@ li {
   justify-content: center;
 }
 
-.card-container h3 {
+.card-container h6 {
+  color: #fff;
+  font-family: zen-kaku-gothic-bold;
   margin: 0;
   flex-grow: 1;
 }
 
 .content {
-  max-height: 5000px;
+  max-height: 20000px;
   transition: max-height 1s ease-out;
 }
 
 .hidden {
   overflow: hidden;
-  max-height: 0px;
+  max-height: 0;
   transition: max-height 1s ease-out;
 }
 
+.highlight {
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 0#ff4136;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #ff4136;
+  }
+
+  to {
+    text-shadow: 0 0 20px transparent;
+  }
+}
+
 .link {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -110,7 +153,7 @@ li {
 }
 
 .card {
-  position: relative;
+  box-sizing: content-box;
   border-radius: 6px;
   background-color: #333;
   border: 1px solid #ff4136;
@@ -130,7 +173,14 @@ li {
   width: 100%;
   height: 90px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+}
+
+.experience-info {
+  flex: 1;
 }
 
 .company-logo {
@@ -145,25 +195,27 @@ li {
   align-items: center;
 }
 
-#personalProjects {
+#projectCarouselDark {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 60vh;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  padding: 2em;
+  overflow: hidden;
 }
 
 .carousel-item {
-  max-width: 600px;
-  transition: transform 0.5s, z-index 0.5s;
-  position: absolute;
-  will-change: transform, z-index, opacity;
+  flex: 0 0 auto; /* For flexbox alignment */
 }
 
 .carousel-item.active {
-  transform: scale(1);
-  z-index: 2;
-  opacity: 1;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-item.active:hover {
@@ -171,41 +223,16 @@ li {
   transform: scale(1.06) !important;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 6px 12px #ff4136;
-}
-
-.carousel-item.inactive {
-  transform: scale(0.4);
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.carousel-item.next,
-.carousel-item.prev {
-  z-index: 0;
-  opacity: 0.4;
-}
-
-.carousel-item.next {
-  transform: translateX(70%) scale(0.8);
-}
-
-.carousel-item.prev {
-  transform: translateX(-70%) scale(0.8);
-}
-
-.repo-name {
-  text-align: center;
-}
-
-.repo-link {
-  text-decoration: none;
+  z-index: 2;
 }
 
 .repo-image {
   width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid #ff4136;
 }
 
 #spinner {
@@ -290,9 +317,9 @@ li {
 }
 
 #sidebar {
+  font-family: zen-kaku-gothic-bold;
   width: 50px;
   overflow: hidden;
-  font-weight: 700;
   border-right: 2px solid #ff4136;
   position: fixed;
   left: 0;
@@ -307,7 +334,6 @@ li {
   text-decoration: none;
   color: #fff;
   display: flex;
-  top: 160px;
   position: relative;
   padding: 10px 15px;
   white-space: nowrap;
@@ -316,8 +342,19 @@ li {
 #sidebar ul li a:hover {
   background-color: #333;
   color: #ff4136;
-  box-shadow: 0 -6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
+  box-shadow: 0-6px 12px -6px #ff4136, 0 6px 12px -6px #ff4136;
   transition: box-shadow 0.5s ease, background-color 1s ease;
+}
+
+.row {
+  justify-content: center;
+}
+
+.profile-photo {
+  margin: 1em;
+  border-radius: 6px;
+  width: 100%;
+  border: 1px solid #ff4136;
 }
 
 .nav-link:hover svg {
@@ -349,7 +386,7 @@ li {
 }
 
 #mg-logo-container {
-  padding-right: 220px;
+  padding-right: 1em;
 }
 
 #mg-logo {
@@ -369,18 +406,26 @@ li {
 
 hr.gradient {
   height: 2px;
-  border: none;
+  border: 0;
   border-radius: 6px;
-  background: linear-gradient(90deg, #333 0%, #ff4136 50%, #333 100%);
+  background: linear-gradient(90deg, #333 0, #ff4136 50%, #333 100%);
 }
 
 h1,
 h3,
+h5,
 .title .role {
+  font-family: zen-kaku-gothic-bold;
   color: #fff;
 }
 
+h4 {
+  font-family: zen-kaku-gothic-bold;
+  color: #ff4136;
+}
+
 h2 {
+  font-family: zen-kaku-gothic-bold;
   color: #ff4136;
 }
 

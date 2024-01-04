@@ -56,7 +56,7 @@ function initializeAOS() {
 document.addEventListener('DOMContentLoaded', initializeAOS);
 
 var sidebar = document.getElementById('sidebar');
-var sidebarWidth = 200;
+var sidebarWidth = 188;
 var collapsedWidth = '50px';
 
 document.addEventListener('mousemove', function (e) {
@@ -87,29 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-const selectedRepos = ['maugapsResume', 'maugapsSecretSanta', 'cypressFrameworkSeed', 'letsTalkDND', 'micka-and-mauro'];
-const username = 'MauGaP';
-
-function createCarouselItems(username, selectedRepos) {
-  const carousel = document.getElementById('personalProjects');
-
-  selectedRepos.forEach(repoName => {
-    const item = document.createElement('div');
-    item.className = 'carousel-item card';
-    const repoUrl = `https://github.com/${username}/${repoName}`;
-    const imageUrl = `./asset/project/${repoName}.png`;
-    item.innerHTML = `
-            <a class="repo-link" href="${repoUrl}" target="_blank">
-              <h3 class="repo-name">${repoName}</h3>
-              <img class="repo-image" src="${imageUrl}" alt="${repoName} Open Graph Image" />
-            </a>
-      `;
-    carousel.appendChild(item);
-  });
-}
-
-createCarouselItems(username, selectedRepos);
 
 function setActiveItem(activeIndex) {
   const items = document.querySelectorAll('.carousel-item');
