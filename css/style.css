@@ -195,25 +195,27 @@ li {
   align-items: center;
 }
 
-#personalProjects {
+#projectCarouselDark {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 60vh;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  padding: 2em;
+  overflow: hidden;
 }
 
 .carousel-item {
-  max-width: 600px;
-  transition: transform 0.5s, z-index 0.5s;
-  position: absolute;
-  will-change: transform, z-index, opacity;
+  flex: 0 0 auto; /* For flexbox alignment */
 }
 
 .carousel-item.active {
-  transform: scale(1);
-  z-index: 2;
-  opacity: 1;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-item.active:hover {
@@ -221,41 +223,16 @@ li {
   transform: scale(1.06) !important;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 6px 12px #ff4136;
-}
-
-.carousel-item.inactive {
-  transform: scale(0.4);
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.carousel-item.next,
-.carousel-item.prev {
-  z-index: 0;
-  opacity: 0.4;
-}
-
-.carousel-item.next {
-  transform: translateX(70%) scale(0.8);
-}
-
-.carousel-item.prev {
-  transform: translateX(-70%) scale(0.8);
-}
-
-.repo-name {
-  text-align: center;
-}
-
-.repo-link {
-  text-decoration: none;
+  z-index: 2;
 }
 
 .repo-image {
   width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid #ff4136;
 }
 
 #spinner {
