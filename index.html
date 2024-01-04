@@ -581,18 +581,18 @@
 
         <section id="projects" class="container-sm">
             <h2>Personal Projects</h2>
-            <div id="projectCarouselDark" class="carousel carousel-dark slide col-md-8" data-bs-ride="carousel">
+            <div id="projectCarousel" class="carousel carousel slide col-md-8" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#projectCarouselDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="maugapsResume"></button>
-                    <button type="button" data-bs-target="#projectCarouselDark" data-bs-slide-to="1"
-                        aria-label="maugapsSecretSanta"></button>
-                    <button type="button" data-bs-target="#projectCarouselDark" data-bs-slide-to="2"
-                        aria-label="cypressFrameworkSeed"></button>
-                    <button type="button" data-bs-target="#projectCarouselDark" data-bs-slide-to="3"
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" title="maugapsResume" aria-label="maugapsResume"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                        title="maugapsSecretSanta" aria-label="maugapsSecretSanta"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
+                        title="cypressFrameworkSeed" aria-label="cypressFrameworkSeed"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" title="letsTalkDND"
                         aria-label="letsTalkDND"></button>
-                    <button type="button" data-bs-target="#projectCarouselDark" data-bs-slide-to="4"
-                        aria-label="micka-and-mauro"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" title="mickaAndMauro"
+                        aria-label="mickaAndMauro"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -628,23 +628,21 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="https://github.com/MauGaP/micka-and-mauro" target="_blank">
-                            <img src="asset/project/micka-and-mauro.png" class="repo-image d-block w-100"
+                        <a href="https://github.com/MauGaP/mickaAndMauro" target="_blank">
+                            <img src="asset/project/mickaAndMauro.png" class="repo-image d-block w-100"
                                 alt="maugapsResume Open Graph Image">
                             <div class="carousel-caption d-none d-md-block">
                             </div>
                         </a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarouselDark"
+                <button class="carousel-control-prev" type="button" title="Previous" data-bs-target="#projectCarousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarouselDark"
+                <button class="carousel-control-next" type="button" title="Next" data-bs-target="#projectCarousel"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
@@ -654,6 +652,22 @@
         <section id="contact" class="container-sm">
             <h2>Contact</h2>
             <div class="contact-container">
+                <form id="contactForm" class="col-md-9 container-fluid" action="https://formspree.io/f/xpzvzyjr"
+                    method="POST">
+                    <h5>Here you can contact me, or leave your contact info and I will get back to you! Let's stay in
+                        touch!</h5>
+
+                    <label for="email" class="form-label">Your email</label><br>
+                    <input type="email" class="form-control" id="email" name="email"><br>
+
+                    <label for="name" class="form-label">Your name</label><br>
+                    <input type="name" class="form-control" id="name" name="name"><br>
+
+                    <label for="message" class="form-label">What's on your mind?</label><br>
+                    <textarea id="message" class="form-control" rows="3" name="message"></textarea><br>
+
+                    <input id="submitForm" type="submit" class="btn btn-primary" value="Send">
+                </form>
                 <div class="social-media-icons">
                     <a href="https://www.linkedin.com/in/maugap" title="Connect with me on LinkedIn" target="_blank">
                         <div class="icon-container">
@@ -688,9 +702,6 @@
                         </div>
                     </a>
                 </div>
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScllBI01FWzr4XmOQm9cR3ol3EKSgrXicflAY2CrfuovLdaBQ/viewform?embedded=true"
-                    width="80%" height="900px" frameborder="0" marginheight="0" marginwidth="0"></iframe>
             </div>
         </section>
     </main>
@@ -699,9 +710,9 @@
 
     <footer class="container-fluid">
         <div>
-            <p class="footer-info">
-                2023 | Mauro Pedano
-            </p>
+            <h5 class="footer-info">
+                2023 | <span class="maugap">MauGaP</span>
+            </h5>
             <p class="footer-info">
                 What? are you still here? there is nothing else to see here... Go! <span class="highlight">Have
                     fun</span>, go go go!
