@@ -185,7 +185,7 @@ li {
 
 .company-logo {
   padding-left: 20px;
-  height: 80%;
+  height: auto;
   margin-right: 10px;
   align-self: center;
 }
@@ -204,8 +204,8 @@ li {
 }
 
 .carousel-inner {
-  padding: 1em;
-  overflow: visible;
+  padding: 2.2em;
+  overflow: hidden;
 }
 
 .carousel-item {
