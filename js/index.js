@@ -1,15 +1,3 @@
-function initializeAOS() {
-  const cards = document.querySelectorAll('.card');
-
-  cards.forEach(card => {
-    card.setAttribute('data-aos-duration', 500);
-  });
-
-  AOS.init();
-}
-
-document.addEventListener('DOMContentLoaded', initializeAOS);
-
 document.addEventListener('DOMContentLoaded', function () {
   var collapsibles = document.querySelectorAll('.collapsible');
 
