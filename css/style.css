@@ -17,35 +17,32 @@ main {
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
-  color: #fff;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   top: 0;
 }
 
-header.scrolled {
-  box-shadow: 0 8px 12px -6px #ff4136;
+.body-slide {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
 }
 
 .footer {
+  margin-top: auto;
+  margin-bottom: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: right;
-  background-color: #190507;
-  color: #fff;
-  bottom: 0;
-  padding: 1em;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5em;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  top: 0;
 }
 
 .content {
