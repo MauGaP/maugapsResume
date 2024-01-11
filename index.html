@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mauro Pedano</title>
@@ -13,541 +17,575 @@
     <link rel="stylesheet" href="css/style.css">
 
 <body class="container-fluid">
-    <div id="scroll-animate">
-        <div id="scroll-animate-main">
-            <div class="wrapper-parallax">
 
-                <section class="header container">
-                    <div class="col-md-6">
-                        <h1>Mauro Gabriel Pedano</h1>
-                        <h5>Software Developer Engineer in Test</h5>
-                        <br>
-                        <br>
-                        <h3>'Hello, World!'</h3>
-                        <div>
-                            <p>
-                                I'm <span class="highlight">Mauro</span>, a software developer specialized in <span
-                                    class="highlight">automation</span> testing, who's been cracking code mysteries and
-                                squashing bugs
-                                for <span class="highlight">over 8 years</span>. Think of me as a digital detective who
-                                loves the thrill
-                                of unraveling software mysteries.
-                            </p>
-                            <p>
-                                Off-duty, I'm an <span class="highlight">adventurer</span> at heart, practicing <span
-                                    class="highlight">martial arts</span>, conquering mountain trails, or exploring
-                                Europe with my <span class="highlight">better half</span>,<span class="highlight">
-                                    Micka</span>
-                                and our little dachshund, <span class="highlight">Freya</span>. For me,
-                                life's a series of adventures, each a chance to grow and excel.
-                            </p>
-                            <p>
-                                I'm all about <span class="highlight">leveling up</span>, both in coding and life. Every
-                                day’s a chance
-                                to <span class="highlight">get better</span> at what I do, and I love a <span
-                                    class="highlight">good
-                                    challenge</span>. On the lookout for an Engineer who's as enthusiastic about <span
-                                    class="highlight">great teamwork</span> as tackling tricky codes? Hit me up, and
-                                let's
-                                see what
-                                <span class="highlight">cool stuff</span> we can <span class="highlight">create
-                                    together</span>!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container row d-none d-md-flex">
-                        <img class="col-8" src="asset/profile/maugap.png" alt="awesome image of myself">
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="container">
-                    <div id="stack" class="container-sm">
-                        <h2>Technology Stack</h2>
-                        <h3>Main tools:</h3>
-                        <div class="row">
-                            <div id="main-tools" class="row card-container">
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/cypress-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/playwright-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img style="background-color: white;" class="stack-logo"
-                                            src="./asset/selenium_logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/js-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/java-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/docker-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/k6-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/git-logo.png">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="collapsible-container">
-                            <h3 class="link collapsible">And many more!...</h5>
-                                <div id="spinner">
-                                    <l-grid size="40" speed="1.2" color="#ff0012"></l-grid>
-                                </div>
-                        </div>
-                        <div id="more-tools" class="card-container content hidden">
-                            <div class="row">
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" style="width: 200px; " src="./asset/nodejs-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/html-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/css-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/python-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/postman-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" style="width: 200px; height: 200px;"
-                                            src="./asset/cucumber-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/dockercompose-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/appium-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img style="background-color: white;" class="stack-logo"
-                                            src="./asset/testng-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/jbehave-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/behave_logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/robotframework-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/junit-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/restassured-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" style="background-color: white;"
-                                            src="./asset/mountebank-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/oracle-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/mysql_logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/mssqlserver-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/mongodb-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/spring-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/maven-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/gradle-logo.svg">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/resemblejs-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/jmeter-logo.png">
-                                    </div>
-                                </div>
-                                <div class="stack col-sm-2">
-                                    <div class="logo-container">
-                                        <img class="stack-logo" src="./asset/jenkins-logo.svg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="container">
-                    <div id="skills" class="container-sm">
-                        <h2>Skills</h2>
-                        <div class="row card-container">
-                            <div class="col-sm-3 card skill">
-                                <h5>Functional Testing</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Automation Testing</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Continuous Integration</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Continuous Delivery</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Mentoring</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Technical Leadership</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Frontend Development</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Backend Development</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Problem Solving</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Visual Testing</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Performance Testing</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>SOLID Design Principles</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Functional Programming</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Behaviour-Driven Development</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Test-Driven Development</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Unit Testing</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>Gherkin</h5>
-                            </div>
-                            <div class="col-sm-3 card skill">
-                                <h5>API Testing</h5>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="container">
-                    <div id="experience" class="container-sm">
-                        <h2>Work Experience</h2>
-                        <div class="card-container row">
-                            <div class="card col-12 experience row">
-                                <img src="asset/incluit-logo.svg" alt="Incluit Logo"
-                                class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">iDocket UCMS @Incluit</h5>
-                                    <hr class="gradient">
-                                    <h6> Automation Architect | 06-2022 - 11-2023</h6>
-                                </div>
-                            </div>
-                            <div class="card col-12 experience row">
-                                <img src="asset/wazuh-logo.png" alt="Wazuh Logo" class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">Kibana App @Wazuh</h5>
-                                    <hr class="gradient">
-                                    <h6> QA Manager | 04-2021 - 06-2022</h6>
-                                </div>
-                            </div>
-                            <div class="card col-12 experience row">
-                                <img src="asset/pinapp-logo.svg" alt="PinApp Logo" class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">Farmacias Peruanas @PinApp</h5>
-                                    <hr class="gradient">
-                                    <h6> Software Developer Engineer in Test | 03-2020 - 04-2021</h6>
-                                </div>
-                            </div>
-                            <div class="card col-12 experience row">
-                                <img src="asset/mcafee-logo.png" alt="McAfee Logo" class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">App Control & EDR @McAfee</h5>
-                                    <hr class="gradient">
-                                    <h6> Software Developer Engineer in Test | 08-2018 - 03-2020</h6>
-                                </div>
-                            </div>
-                            <div class="card col-12 experience row">
-                                <img src="asset/esolutions-logo.svg" alt="eSolutions Logo"
-                                class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">Claro WDC & Aloha @eSolutions</h5>
-                                    <hr class="gradient">
-                                    <h6> Test Automation Engineer | 11-2016 - 08-2018</h6>
-                                </div>
-
-                            </div>
-                            <div class="card col-12 experience row">
-                                <img src="asset/globant-dark-logo.png" alt="Globant Logo"
-                                class="company-logo col-md-3 col-12">
-                                <div class="experience-info">
-                                    <h5 class="company">Southwest Airlines MVision @Globant</h5>
-                                    <hr class="gradient">
-                                    <h6> Test Automation Engineer | 05-2015 - 11-2016</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="container">
-                    <div id="projects" class="container-sm">
-                        <h2>Personal Projects</h2>
-                        <div id="projectCarousel" class="carousel carousel slide col-lg-9" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0"
-                                    class="active" aria-current="true" title="maugapsResume"
-                                    aria-label="maugapsResume"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
-                                    title="maugapsSecretSanta" aria-label="maugapsSecretSanta"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
-                                    title="cypressFrameworkSeed" aria-label="cypressFrameworkSeed"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"
-                                    title="letsTalkDND" aria-label="letsTalkDND"></button>
-                                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"
-                                    title="mickaAndMauro" aria-label="mickaAndMauro"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <a href="https://github.com/MauGaP/maugapsResume" target="_blank">
-                                        <img src="asset/project/maugapsResume.png" class="repo-image d-block w-100"
-                                            alt="maugapsResume Open Graph Image">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://github.com/MauGaP/maugapsSecretSanta" target="_blank">
-                                        <img src="asset/project/maugapsSecretSanta.png" class="repo-image d-block w-100"
-                                            alt="maugapsResume Open Graph Image">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://github.com/MauGaP/cypressFrameworkSeed" target="_blank">
-                                        <img src="asset/project/cypressFrameworkSeed.png"
-                                            class="repo-image d-block w-100" alt="maugapsResume Open Graph Image">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://github.com/MauGaP/letsTalkDND" target="_blank">
-                                        <img src="asset/project/letsTalkDND.png" class="repo-image d-block w-100"
-                                            alt="maugapsResume Open Graph Image">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="https://github.com/MauGaP/mickaAndMauro" target="_blank">
-                                        <img src="asset/project/mickaAndMauro.png" class="repo-image d-block w-100"
-                                            alt="maugapsResume Open Graph Image">
-                                        <div class="carousel-caption d-none d-md-block">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" title="Previous"
-                                data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" title="Next"
-                                data-bs-target="#projectCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="container">
-                    <div id="contact" class="container-sm">
-                        <h2>Contact</h2>
-                        <div class="contact-container">
-                            <form id="contactForm" class="col-md-9 container" action="https://formspree.io/f/xpzvzyjr"
-                                method="POST">
-                                <h5>Here you can contact me, or leave your contact info and I will get back to you!
-                                    Let's
-                                    stay
-                                    in
-                                    touch!</h5>
-
-                                <label for="email" class="form-label">Your email</label><br>
-                                <input type="email" class="form-control" id="email" name="email"><br>
-
-                                <label for="name" class="form-label">Your name</label><br>
-                                <input type="name" class="form-control" id="name" name="name"><br>
-
-                                <label for="message" class="form-label">What's on your mind?</label><br>
-                                <textarea id="message" class="form-control" rows="3" name="message"></textarea><br>
-
-                                <input id="submitForm" type="submit" class="btn btn-primary" value="Send">
-                            </form>
-                            <div class="social-media-icons">
-                                <a href="https://www.linkedin.com/in/maugap" title="Connect with me on LinkedIn"
-                                    target="_blank">
-                                    <div class="icon-container">
-                                        <img class="icon-white" src="asset/social/linkedin-icon-white.png"
-                                            alt="LinkedIn">
-                                        <img class="icon-colored" src="asset/social/linkedin-icon-color.png"
-                                            alt="LinkedIn">
-                                    </div>
-                                </a>
-                                <a href="https://www.twitch.tv/maugap" title="Follow me on Twitch" target="_blank">
-                                    <div class="icon-container">
-                                        <img class="icon-white" src="asset/social/twitch-icon-white.png" alt="Twitch">
-                                        <img class="icon-colored" src="asset/social/twitch-icon-color.png" alt="Twitch">
-                                    </div>
-                                </a>
-                                <a href="https://www.instagram.com/maugap" title="See photos of my wiener on Instagram"
-                                    target="_blank">
-                                    <div class="icon-container">
-                                        <img class="icon-white" src="asset/social/instagram-icon-white.png"
-                                            alt="Instagram">
-                                        <img class="icon-colored" src="asset/social/instagram-icon-color.png"
-                                            alt="Instagram">
-                                    </div>
-                                </a>
-                                <a href="mailto:mauro.pedano@gmail.com" title="Send me an email" target="_blank">
-                                    <div class="icon-container">
-                                        <img class="icon-white" src="asset/social/email-icon-white.svg" alt="Email">
-                                        <img class="icon-colored" src="asset/social/email-icon-color.svg" alt="Email">
-                                    </div>
-                                </a>
-                                <a href="asset/resume/Resume - Mauro Pedano.pdf" download="Resume - Mauro Pedano"
-                                    title="Get my CV here" target="_blank">
-                                    <div class="icon-container">
-                                        <img class="icon-white" src="asset/social/resume-icon-white.svg"
-                                            alt="Resume Download">
-                                        <img class="icon-colored" src="asset/social/resume-icon-color.svg"
-                                            alt="Resume Download">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="gradient">
-
-                <section class="footer container">
+    <div class="scrollMagicContainer">
+        <section class="header body-slide container-fluid">
+            <div class="container row">
+                <div class="col-12 col-md-6">
+                    <h1 class="col-12">Mauro Gabriel Pedano</h1>
+                    <h5 class="col-12">Software Developer Engineer in Test</h5>
+                    <br>
+                    <br>
+                    <h3>'Hello, World!'</h3>
                     <div>
-                        <h5 class="footer-info">
-                            2023 | <span class="maugap">MauGaP</span>
-                        </h5>
-                        <p class="footer-info">
-                            What? are you still here? there is nothing else to see here... Go! <span
-                                class="highlight">Have
-                                fun</span>, go go go!
+                        <p>
+                            I'm <span class="highlight">Mauro</span>, a software developer specialized in <span
+                                class="highlight">automation</span> testing, who's been cracking code mysteries and
+                            squashing bugs
+                            for <span class="highlight">over 8 years</span>. Think of me as a digital detective who
+                            loves the thrill
+                            of unraveling software mysteries.
+                        </p>
+                        <p>
+                            Off-duty, I'm an <span class="highlight">adventurer</span> at heart, practicing <span
+                                class="highlight">martial arts</span>, conquering mountain trails, or exploring
+                            Europe with my <span class="highlight">better half</span>,<span class="highlight">
+                                Micka</span>
+                            and our little dachshund, <span class="highlight">Freya</span>. For me,
+                            life's a series of adventures, each a chance to grow and excel.
+                        </p>
+                        <p>
+                            I'm all about <span class="highlight">leveling up</span>, both in coding and life. Every
+                            day’s a chance
+                            to <span class="highlight">get better</span> at what I do, and I love a <span
+                                class="highlight">good
+                                challenge</span>. On the lookout for an Engineer who's as enthusiastic about <span
+                                class="highlight">great teamwork</span> as tackling tricky codes? Hit me up, and
+                            let's
+                            see what
+                            <span class="highlight">cool stuff</span> we can <span class="highlight">create
+                                together</span>!
                         </p>
                     </div>
-                    <div id="mg-logo-container">
+                </div>
+                <div class="col-md-6 col-12 order-md-2">
+                    <img id="maugapPic" src="asset/profile/maugap.png" alt="awesome image of myself">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div id="stack" class="container-sm">
+                    <h2>Technology Stack</h2>
+                    <h3>Main tools:</h3>
+                    <div class="row">
+                        <div id="main-tools" class="row card-container">
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/cypress-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/playwright-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img style="background-color: white;" class="stack-logo"
+                                        src="./asset/selenium_logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/js-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/java-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/docker-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/k6-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/git-logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapsible-container">
+                        <h3 class="link collapsible">And many more!...</h5>
+                            <div id="spinner">
+                                <l-grid size="40" speed="1.2" color="#ff0012"></l-grid>
+                            </div>
+                    </div>
+                    <div id="more-tools" class="card-container content hidden">
+                        <div class="row">
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" style="width: 200px; " src="./asset/nodejs-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/html-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/css-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/python-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/postman-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" style="width: 200px; height: 200px;"
+                                        src="./asset/cucumber-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/dockercompose-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/appium-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img style="background-color: white;" class="stack-logo"
+                                        src="./asset/testng-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/jbehave-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/behave_logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/robotframework-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/junit-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/restassured-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" style="background-color: white;"
+                                        src="./asset/mountebank-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/oracle-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/mysql_logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/mssqlserver-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/mongodb-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/spring-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/maven-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/gradle-logo.svg">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/resemblejs-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/jmeter-logo.png">
+                                </div>
+                            </div>
+                            <div class="stack col-md-2 col-6">
+                                <div class="logo-container">
+                                    <img class="stack-logo" src="./asset/jenkins-logo.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div id="skills" class="container-sm">
+                    <h2>Skills</h2>
+                    <div class="row card-container">
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Functional Testing</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Automation Testing</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Continuous Integration</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Continuous Delivery</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Mentoring</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Technical Leadership</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Frontend Development</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Backend Development</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Problem Solving</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Visual Testing</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Performance Testing</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>SOLID Design Principles</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Functional Programming</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Behaviour-Driven Development</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Test-Driven Development</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Unit Testing</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>Gherkin</h6>
+                        </div>
+                        <div class="col-sm-3 col-10 card skill">
+                            <h6>API Testing</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div id="experience" class="container">
+                    <h2>Work Experience</h2>
+                    <div class="card-container row">
+                        <div class="card col-10 experience">
+                            <img src="asset/incluit-logo.svg" alt="Incluit Logo" class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">iDocket UCMS @Incluit</h5>
+                                <hr class="gradient">
+                                <h6> Automation Architect | 06-2022 - 11-2023</h6>
+                            </div>
+                        </div>
+                        <div class="card col-10 experience">
+                            <img src="asset/wazuh-logo.png" alt="Wazuh Logo" class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">Kibana App @Wazuh</h5>
+                                <hr class="gradient">
+                                <h6> QA Manager | 04-2021 - 06-2022</h6>
+                            </div>
+                        </div>
+                        <div class="card col-10 experience">
+                            <img src="asset/pinapp-logo.svg" alt="PinApp Logo" class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">Farmacias Peruanas @PinApp</h5>
+                                <hr class="gradient">
+                                <h6> Software Developer Engineer in Test | 03-2020 - 04-2021</h6>
+                            </div>
+                        </div>
+                        <div class="card col-10 experience">
+                            <img src="asset/mcafee-logo.png" alt="McAfee Logo" class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">App Control & EDR @McAfee</h5>
+                                <hr class="gradient">
+                                <h6> Software Developer Engineer in Test | 08-2018 - 03-2020</h6>
+                            </div>
+                        </div>
+                        <div class="card col-10 experience">
+                            <img src="asset/esolutions-logo.svg" alt="eSolutions Logo"
+                                class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">Claro WDC & Aloha @eSolutions</h5>
+                                <hr class="gradient">
+                                <h6> Test Automation Engineer | 11-2016 - 08-2018</h6>
+                            </div>
+
+                        </div>
+                        <div class="card col-10 experience">
+                            <img src="asset/globant-dark-logo.png" alt="Globant Logo"
+                                class="company-logo col-md-3 col-12">
+                            <div class="experience-info">
+                                <br class="d-md-none">
+                                <h5 class="company">Southwest Airlines MVision @Globant</h5>
+                                <hr class="gradient">
+                                <h6> Test Automation Engineer | 05-2015 - 11-2016</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div id="projects" class="container">
+                    <h2>Personal Projects</h2>
+                    <div id="projectCarousel" class="carousel col-10" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" title="maugapsResume" aria-label="maugapsResume"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                                title="maugapsSecretSanta" aria-label="maugapsSecretSanta"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
+                                title="cypressFrameworkSeed" aria-label="cypressFrameworkSeed"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"
+                                title="letsTalkDND" aria-label="letsTalkDND"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"
+                                title="mickaAndMauro" aria-label="mickaAndMauro"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="https://github.com/MauGaP/maugapsResume" target="_blank">
+                                    <img src="asset/project/maugapsResume.png" class="repo-image d-block w-100"
+                                        alt="maugapsResume Open Graph Image">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/MauGaP/maugapsSecretSanta" target="_blank">
+                                    <img src="asset/project/maugapsSecretSanta.png" class="repo-image d-block w-100"
+                                        alt="maugapsResume Open Graph Image">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/MauGaP/cypressFrameworkSeed" target="_blank">
+                                    <img src="asset/project/cypressFrameworkSeed.png" class="repo-image d-block w-100"
+                                        alt="maugapsResume Open Graph Image">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/MauGaP/letsTalkDND" target="_blank">
+                                    <img src="asset/project/letsTalkDND.png" class="repo-image d-block w-100"
+                                        alt="maugapsResume Open Graph Image">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/MauGaP/mickaAndMauro" target="_blank">
+                                    <img src="asset/project/mickaAndMauro.png" class="repo-image d-block w-100"
+                                        alt="maugapsResume Open Graph Image">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" title="Previous"
+                            data-bs-target="#projectCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" title="Next"
+                            data-bs-target="#projectCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div id="contact" class="container-sm">
+                    <h2>Contact</h2>
+                    <div class="contact-container d-flex flex-column flex-md-row align-items-start">
+                        <form id="contactForm" class="col-md-9 container" action="https://formspree.io/f/xpzvzyjr"
+                            method="POST">
+                            <h5>Here you can contact me, or leave your contact info and I will get back to you! Let's
+                                stay in touch!</h5>
+
+                            <label for="email" class="form-label">Your email</label><br>
+                            <input type="email" class="form-control" id="email" name="email"><br>
+
+                            <label for="name" class="form-label">Your name</label><br>
+                            <input type="name" class="form-control" id="name" name="name"><br>
+
+                            <label for="message" class="form-label">What's on your mind?</label><br>
+                            <textarea id="message" class="form-control" rows="3" name="message"></textarea><br>
+
+                            <input id="submitForm" type="submit" class="justify-content-end btn btn-primary" value="Send">
+
+                        </form>
+                        <div class="social-media-icons d-flex flex-row flex-md-column mt-3 mt-md-0 ms-md-3">
+                            <a href="https://www.linkedin.com/in/maugap" title="Connect with me on LinkedIn"
+                                target="_blank">
+                                <div class="icon-container">
+                                    <img class="icon-white" src="asset/social/linkedin-icon-white.png" alt="LinkedIn">
+                                    <img class="icon-colored" src="asset/social/linkedin-icon-color.png" alt="LinkedIn">
+                                </div>
+                            </a>
+                            <a href="https://www.twitch.tv/maugap" title="Follow me on Twitch" target="_blank">
+                                <div class="icon-container">
+                                    <img class="icon-white" src="asset/social/twitch-icon-white.png" alt="Twitch">
+                                    <img class="icon-colored" src="asset/social/twitch-icon-color.png" alt="Twitch">
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/maugap" title="See photos of my wiener on Instagram"
+                                target="_blank">
+                                <div class="icon-container">
+                                    <img class="icon-white" src="asset/social/instagram-icon-white.png" alt="Instagram">
+                                    <img class="icon-colored" src="asset/social/instagram-icon-color.png"
+                                        alt="Instagram">
+                                </div>
+                            </a>
+                            <a href="mailto:mauro.pedano@gmail.com" title="Send me an email" target="_blank">
+                                <div class="icon-container">
+                                    <img class="icon-white" src="asset/social/email-icon-white.svg" alt="Email">
+                                    <img class="icon-colored" src="asset/social/email-icon-color.svg" alt="Email">
+                                </div>
+                            </a>
+                            <a href="asset/resume/Resume - Mauro Pedano.pdf" download="Resume - Mauro Pedano"
+                                title="Get my CV here" target="_blank">
+                                <div class="icon-container">
+                                    <img class="icon-white" src="asset/social/resume-icon-white.svg"
+                                        alt="Resume Download">
+                                    <img class="icon-colored" src="asset/social/resume-icon-color.svg"
+                                        alt="Resume Download">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scrollMagicContainer">
+        <section class="footer body-slide container-fluid row">
+
+            <hr class="gradient">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <h5 class="footer-info col-9 col-md-12">
+                                2023 | <span class="maugap">MauGaP</span>
+                            </h5>
+                            <div id="mg-logo-container" class="d-md-none col-3">
+                                <img src="asset/mg-logo.png" alt="MG Logo" id="mg-logo">
+                            </div>
+                        </div>
+                        <div class="ro2">
+                            <p class="footer-info">
+                                What? are you still here? there is nothing else to see here... Go! <span
+                                    class="highlight">Have
+                                    fun</span>, go go go!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="mg-logo-container" class="d-none d-md-block col-lg-2 col-3">
                         <img src="asset/mg-logo.png" alt="MG Logo" id="mg-logo">
                     </div>
-                </section>
-
-                <section class="container row">
-                    <iframe src="https://giphy.com/embed/Moo7MaEdEJ7mo" width="480" height="192" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
-                </section>
-
+                </div>
             </div>
-        </div>
+
+            <div class="row">
+                <iframe src="https://giphy.com/embed/Moo7MaEdEJ7mo" allowFullScreen></iframe>
+            </div>
+        </section>
     </div>
 
     <script src="js/index.js"></script>

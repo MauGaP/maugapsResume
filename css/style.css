@@ -1,12 +1,17 @@
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #190507;
+  margin: 0;
+  padding: 0;
+  background-color: #181212;
   color: #fff;
   font-family: Sora;
-  margin: 0;
+  overflow-x: hidden;
 }
 
 main {
@@ -14,38 +19,34 @@ main {
 }
 
 .header {
+  position: relative;
+  background-color: #181212;
   margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
-  color: #fff;
+}
+
+.row {
   align-items: center;
+}
+
+.body-slide {
+  background-color: #181212;
+  display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100%;
   top: 0;
 }
 
-header.scrolled {
-  box-shadow: 0 8px 12px -6px #ff4136;
-}
-
 .footer {
+  position: relative;
+  background-color: #181212;
+  margin-top: auto;
+  margin-bottom: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: right;
-  background-color: #190507;
-  color: #fff;
-  bottom: 0;
-  padding: 1em;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5em;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  top: 0;
 }
 
 .content {
@@ -91,7 +92,7 @@ li {
 .card {
   box-sizing: content-box;
   border-radius: 6px;
-  background-color: #190507;
+  background-color: #181212;
   border: 1px solid #ff0012;
   margin: 0.5em;
   padding: 1em;
@@ -118,6 +119,10 @@ li {
   align-self: center;
 }
 
+.container {
+  padding: 1em;
+}
+
 .collapsible-container {
   display: flex;
   align-items: center;
@@ -129,10 +134,11 @@ li {
   align-items: center;
   position: relative;
   margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .carousel-inner {
-  padding: 2.2em;
   overflow: hidden;
 }
 
@@ -159,23 +165,18 @@ li {
   display: none;
 }
 
-.card:hover {
-  background-color: #190507;
-  transform: scale(1.06) !important;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 6px 12px #ff0012;
-}
-
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 150px; /* or any height that suits your design */
+  margin: 10px 0; /* optional: adds some space between logos */
 }
 
-.logo-container img {
-  max-width: 90%;
-  max-height: 90%;
+.stack-logo {
+  max-width: 80%; /* max-width relative to logo-container's width */
+  max-height: 100%; /* max-height relative to logo-container's height */
+  object-fit: contain; /* ensures image aspect ratio is maintained */
 }
 
 .contact-container {
@@ -189,7 +190,8 @@ li {
 
 .social-media-icons a {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+  margin-right: 1em;
 }
 
 .icon-container {
@@ -236,7 +238,7 @@ li {
 }
 
 #mg-logo {
-  width: 150px;
+  width: 100%;
   height: auto;
 }
 
@@ -244,7 +246,7 @@ hr.gradient {
   height: 2px;
   border: 0;
   border-radius: 6px;
-  background: linear-gradient(90deg, #190507 0, #ff0012 50%, #190507 100%);
+  background: linear-gradient(90deg, #181212 0, #ff0012 50%, #181212 100%);
 }
 
 h1 {
@@ -279,13 +281,13 @@ a,
 }
 
 .form-control {
-  background-color: #351c1f;
+  background-color: #201717;
   color: #fff;
   border: #ff0012;
 }
 
 .form-control:focus-visible {
-  background-color: #190507;
+  background-color: #181212;
   color: #fff;
   border: #ff0012;
   box-shadow: 0 0 12px #ff0012;
@@ -295,7 +297,7 @@ a,
   justify-content: right;
   color: #ff0012;
   border-color: #ff0012;
-  background-color: #190507;
+  background-color: #181212;
 }
 
 #submitForm:hover {
@@ -315,6 +317,10 @@ a,
   color: #ff0012;
 }
 
+.carousel-indicators {
+  margin-bottom: -3vh; /* This gives space between the carousel and the indicators, adjust as needed */
+}
+
 #projectCarousel .carousel-indicators button {
   background-color: #ff0012;
 }
@@ -329,4 +335,19 @@ span.carousel-control-next-icon {
 
 span.carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23c0121f' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}
+
+/* Move the left arrow to the left of the slide */
+.carousel-control-prev {
+  left: -8vw; /* Adjust this value as needed */
+}
+
+/* Move the right arrow to the right of the slide */
+.carousel-control-next {
+  right: -8vw; /* Adjust this value as needed */
+}
+
+#maugapPic {
+  width: 100%;
+  height: auto;
 }
