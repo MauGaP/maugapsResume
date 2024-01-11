@@ -33,3 +33,23 @@ function setActiveItem(activeIndex) {
     }
   });
 }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   var controller = new ScrollMagic.Controller();
+
+//   document.querySelectorAll('.scrollMagicContainer .body-slide').forEach(function (elem) {
+//     // Calculate the height of the element minus the viewport height
+//     var sceneHeight = elem.scrollHeight - window.innerHeight;
+
+//     new ScrollMagic.Scene({
+//       triggerElement: elem,
+//       duration: sceneHeight > 0 ? sceneHeight : 0, // Ensure non-negative duration
+//       triggerHook: 0,
+//     })
+//       .setPin(elem, { pushFollowers: false })
+//       .addTo(controller);
+
+//     // Optional: For debugging
+//     // .addIndicators({name: "scene"});
+//   });
+// });
