@@ -49,6 +49,18 @@ main {
   top: 0;
 }
 
+.footer-animation {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footer-gif {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
 .content {
   max-height: 20000px;
   transition: max-height 1s ease-out;
@@ -91,6 +103,7 @@ main {
 
 .card {
   box-sizing: content-box;
+  color: #fff;
   border-radius: 6px;
   background-color: #181212;
   border: 1px solid #ff0012;
@@ -99,7 +112,8 @@ main {
 }
 
 .card.experience {
-  width: 100%;
+  box-sizing: border-box;
+  width: calc(100% - 1em);
   height: auto;
   display: flex;
   flex-direction: row;
@@ -109,6 +123,57 @@ main {
 }
 
 .experience-info {
+  flex: 1 1 18rem;
+  min-width: 0;
+}
+
+.experience-accordion {
+  width: 100%;
+}
+
+.experience-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 4px;
+}
+
+.experience-summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-summary::after {
+  content: "";
+  flex: 0 0 0.65rem;
+  height: 0.65rem;
+  margin: 0 0.4rem;
+  border-right: 2px solid #ff0012;
+  border-bottom: 2px solid #ff0012;
+  transform: rotate(45deg);
+}
+
+.experience-accordion[open] > .experience-summary::after {
+  transform: rotate(225deg);
+}
+
+.experience-summary:hover .company {
+  color: #ff7a84;
+}
+
+.experience-summary:focus-visible {
+  outline: 2px solid #ff7a84;
+  outline-offset: 6px;
+}
+
+.experience-summary .company-logo {
+  width: 20%;
+  max-width: 180px;
+  margin: 0;
+}
+
+.experience-summary .experience-info {
   flex: 1;
 }
 
@@ -350,4 +415,117 @@ span.carousel-control-prev-icon {
 #maugapPic {
   width: 100%;
   height: auto;
+}
+
+.resume-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.resume-download {
+  color: #fff;
+  border: 1px solid #ff0012;
+}
+
+.resume-download:hover,
+.resume-download:focus-visible {
+  color: #fff;
+  background-color: #b9000e;
+  border-color: #ff0012;
+}
+
+.experience-details {
+  flex: 0 0 100%;
+  width: 100%;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+.experience-details h4 {
+  margin-top: 1.5rem;
+}
+
+.experience-details li {
+  margin-bottom: 0.5rem;
+}
+
+.qualification {
+  align-self: stretch;
+}
+
+#projects {
+  padding-bottom: 3rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  min-height: 300px;
+  padding: 2rem;
+  border: 1px solid #ff0012;
+  border-radius: 6px;
+}
+
+.project-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-logo {
+  width: 100%;
+  max-width: 150px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.project-type,
+.project-tech {
+  color: #e4b8bb;
+}
+
+.project-type {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.project-copy {
+  min-width: 0;
+  line-height: 1.7;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .experience-summary {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .experience-summary .company-logo {
+    width: 100%;
+    max-width: 120px;
+    margin-right: calc(100% - 120px);
+  }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .project-logo {
+    height: 80px;
+    max-width: 100px;
+  }
 }
