@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="#ff7a84" stroke-width="3" stroke-linejoin="round">
+  <path d="M60 8 108 36 108 84 60 112 12 84 12 36Z"/>
+  <path d="M60 8 32 43 12 36M60 8 88 43 108 36M32 43 88 43 60 89ZM32 43 12 84 60 89 108 84 88 43M60 89 60 112"/>
+  <text x="60" y="65" fill="#fff" stroke="none" font-family="sans-serif" font-size="20" text-anchor="middle">20</text>
+</svg>
