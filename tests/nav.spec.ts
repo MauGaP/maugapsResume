@@ -49,3 +49,37 @@ for (const width of [390, 1440]) {
     await expect(brand).toBeVisible();
   });
 }
+
+test('brand stays opaque during entry, exit and a rapid reversal', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  await page.evaluate(() => { document.documentElement.style.scrollBehavior = 'auto'; });
+  const top = await page.locator('.hero-brand').evaluate(el => el.getBoundingClientRect().top);
+  const sample = async (scrollY: number) => page.evaluate(async y => {
+    window.scrollTo(0, y);
+    const frames: { copy: boolean; visible: boolean }[] = [];
+    const start = performance.now();
+    while (performance.now() - start < 190) {
+      await new Promise(requestAnimationFrame);
+      const copy = document.querySelector('.brand-flight');
+      const visible = [copy, document.querySelector('.hero-brand'), document.querySelector('.site-header .brand')].some(el => {
+        if (!el) return false;
+        const style = getComputedStyle(el);
+        const rect = el.getBoundingClientRect();
+        return style.visibility === 'visible' && Number(style.opacity) >= .99 && rect.bottom > 0;
+      });
+      frames.push({ copy: !!copy, visible });
+    }
+    return frames;
+  }, scrollY);
+  for (const y of [top - 20, 0, top - 20]) {
+    const frames = await sample(y);
+    expect(frames.some(frame => frame.copy)).toBe(true);
+    expect(frames.every(frame => frame.visible)).toBe(true);
+  }
+  await expect(page.locator('.brand-flight')).toHaveCount(0);
+  await expect(page.locator('.site-header .brand')).toBeVisible();
+  await sample(0);
+  await expect(page.locator('.brand-flight')).toHaveCount(0);
+  await expect(page.locator('.hero-brand')).toBeVisible();
+});

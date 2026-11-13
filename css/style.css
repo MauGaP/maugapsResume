@@ -240,3 +240,5 @@ footer nav a { color: var(--text-2); font-size: 14px; text-decoration: none; min
 .hero-brand .brand-mark { width: 80px; }
 .hero-brand.is-transferred { visibility: hidden; }
 .brand-flight { position: fixed; z-index: 20; margin: 0; pointer-events: none; transform-origin: top left; }
+
+.brand-transitioning { visibility: hidden !important; }

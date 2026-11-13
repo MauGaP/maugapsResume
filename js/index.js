@@ -43,44 +43,79 @@ let headerVisible = null;
 let pendingFrame = false;
 let flight;
 
+function brandPose(element, fixedHeader = false) {
+  const rect = element.getBoundingClientRect();
+  const style = getComputedStyle(element);
+  return {
+    left: rect.left,
+    top: rect.top - (fixedHeader ? header.getBoundingClientRect().top : 0),
+    fontSize: parseFloat(style.fontSize),
+    gap: parseFloat(style.gap),
+    logoWidth: element.querySelector('img').getBoundingClientRect().width,
+  };
+}
+
+function finishFlight() {
+  if (flight) {
+    cancelAnimationFrame(flight.frame);
+    flight.copy.remove();
+    flight = null;
+  }
+  heroBrand.classList.remove('brand-transitioning');
+  navBrand.classList.remove('brand-transitioning');
+}
+
+function moveBrand(from) {
+  const copy = heroBrand.cloneNode(true);
+  copy.className = 'brand brand-flight';
+  copy.setAttribute('aria-hidden', 'true');
+  copy.removeAttribute('href');
+  document.body.append(copy);
+  heroBrand.classList.add('brand-transitioning');
+  navBrand.classList.add('brand-transitioning');
+  const logo = copy.querySelector('img');
+  const paint = pose => {
+    Object.assign(copy.style, {
+      left: `${pose.left}px`, top: `${pose.top}px`,
+      fontSize: `${pose.fontSize}px`, gap: `${pose.gap}px`,
+    });
+    logo.style.width = `${pose.logoWidth}px`;
+  };
+  paint(from);
+  const start = performance.now();
+  const current = { copy, frame: 0 };
+  flight = current;
+  function step(now) {
+    // Track the hero's live position while scrolling, including on the return trip.
+    const to = brandPose(headerVisible ? navBrand : heroBrand, headerVisible);
+    const progress = Math.min((now - start) / 320, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const pose = {};
+    for (const key of Object.keys(from)) pose[key] = from[key] + (to[key] - from[key]) * eased;
+    paint(pose);
+    if (progress === 1) finishFlight();
+    else current.frame = requestAnimationFrame(step);
+  }
+  current.frame = requestAnimationFrame(step);
+}
+
 function updateHeader() {
   pendingFrame = false;
-  const source = heroBrand.getBoundingClientRect();
-  const visible = source.top <= 24;
+  const visible = heroBrand.getBoundingClientRect().top <= 24;
   if (visible === headerVisible) return;
+  const initialized = headerVisible !== null;
+  // Capture the moving copy before cancelling, so rapid reversals never jump.
+  const from = brandPose(flight?.copy ?? (visible ? heroBrand : navBrand));
+  finishFlight();
   headerVisible = visible;
-  flight?.cancel();
   header.classList.toggle('is-visible', visible);
   header.inert = !visible;
   heroBrand.classList.toggle('is-transferred', visible);
   if (!visible) {
     closeMenu();
     if (header.contains(document.activeElement)) heroBrand.focus({ preventScroll: true });
-    return;
   }
-  if (reducedMotion.matches) return;
-
-  // Animate a decorative copy between the two real links; neither layout moves.
-  const target = navBrand.getBoundingClientRect();
-  const headerTop = header.getBoundingClientRect().top;
-  const copy = heroBrand.cloneNode(true);
-  copy.classList.remove('is-transferred');
-  copy.classList.add('brand-flight');
-  copy.setAttribute('aria-hidden', 'true');
-  copy.removeAttribute('href');
-  Object.assign(copy.style, {
-    left: `${source.left}px`, top: `${source.top}px`,
-    width: `${source.width}px`, height: `${source.height}px`,
-  });
-  document.body.append(copy);
-  navBrand.style.visibility = 'hidden';
-  flight = copy.animate([
-    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-    { transform: `translate(${target.left - source.left}px, ${target.top - headerTop - source.top}px) scale(${target.width / source.width})`, opacity: 0 },
-  ], { duration: 320, easing: 'cubic-bezier(.22, 1, .36, 1)' });
-  const cleanup = () => { copy.remove(); navBrand.style.removeProperty('visibility'); };
-  flight.onfinish = cleanup;
-  flight.oncancel = cleanup;
+  if (initialized && !reducedMotion.matches) moveBrand(from);
 }
 
 function scheduleHeaderUpdate() {
