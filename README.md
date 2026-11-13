@@ -6,7 +6,7 @@ Personal CV and portfolio, served directly from the repository root by GitHub Pa
 
 - `index.html`: semantic page content, native exclusive experience accordions, project grid, CV links and Formspree contact form.
 - `css/style.css`: design tokens, typography, responsive layouts and reduced-motion support.
-- `js/index.js`: accessible mobile navigation and current footer year. Experience accordions work without JavaScript.
+- `js/index.js`: hero-to-navbar identity animation, accessible mobile navigation and current footer year. Experience accordions work without JavaScript.
 - `asset/profile/maugap.webp`: optimized summit portrait; the original JPG remains the fallback.
 - `asset/resume/`: one-page and detailed CV PDFs.
 - `asset/project/`: project illustrations and logos.

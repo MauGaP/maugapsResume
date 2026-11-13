@@ -10,6 +10,8 @@ for (const width of [1440, 390]) {
       expect(result.violations.filter(v => ['serious', 'critical'].includes(v.impact ?? ''))).toEqual([]);
     };
     await scan();
+    await page.evaluate(() => window.scrollTo(0, 500));
+    await scan();
     if (width === 390) {
       await page.getByRole('button', { name: 'Open menu' }).click();
       await scan();

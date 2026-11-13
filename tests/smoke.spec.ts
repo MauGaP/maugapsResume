@@ -5,6 +5,7 @@ test('page, navigation, original experience and PDF downloads', async ({ page, r
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('I help teams ship software their customers can trust.');
+  await page.evaluate(() => window.scrollTo(0, 500));
   for (const target of ['why-quality', 'experience', 'skills', 'projects', 'contact']) {
     await expect(page.locator(`#${target}`)).toHaveCount(1);
     await expect(page.getByRole('navigation', { name: 'Main' }).locator(`[href="#${target}"]`)).toBeVisible();

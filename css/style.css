@@ -60,7 +60,7 @@ section { padding-block: 32px 96px; }
 /* Navigation */
 .skip-link { position: fixed; left: 24px; top: -100px; z-index: 20; padding: 12px 20px; background: var(--text); color: var(--bg); }
 .skip-link:focus { top: 12px; color: var(--bg); }
-.site-header { position: sticky; top: 0; z-index: 10; background: rgba(13,11,11,.82); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.site-header { position: fixed; inset: 0 0 auto; transform: translateY(-100%); visibility: hidden; transition: transform 320ms cubic-bezier(.22, 1, .36, 1), visibility 320ms; z-index: 10; background: rgba(13,11,11,.82); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
 .header-row, #site-menu { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .header-row { padding-block: 14px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font: 600 17px var(--font-display); text-decoration: none; white-space: nowrap; }
@@ -233,3 +233,10 @@ footer nav a { color: var(--text-2); font-size: 14px; text-decoration: none; min
   .checks-badge { font-size: 10px; }
 }
 [hidden] { display: none !important; }
+
+/* The hero identity becomes the navigation identity as it leaves the viewport. */
+.site-header.is-visible { transform: translateY(0); visibility: visible; }
+.hero-brand { align-self: flex-start; font-size: clamp(24px, 3vw, 32px); gap: 16px; }
+.hero-brand .brand-mark { width: 80px; }
+.hero-brand.is-transferred { visibility: hidden; }
+.brand-flight { position: fixed; z-index: 20; margin: 0; pointer-events: none; transform-origin: top left; }
