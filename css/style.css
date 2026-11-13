@@ -194,3 +194,42 @@ footer nav a { color: var(--text-2); font-size: 14px; text-decoration: none; min
 .footer-bottom a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--subtle); text-decoration: none; }
 .checks-badge { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font: 12px/1.6 var(--font-mono); }
 .checks-badge svg { width: 16px; color: var(--ok); }
+
+/* Keep tablet grids balanced and the navigation usable before mobile collapse. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .principles-grid, .projects-grid, .credentials-grid, .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .header-row, #site-menu { gap: 12px; }
+  .header-row .brand { font-size: 15px; gap: 8px; }
+  #site-menu > a { font-size: 12px; }
+  #site-menu .btn-light { padding-inline: 12px; gap: 6px; }
+  .hero-portrait { max-width: 520px; }
+}
+@media (max-width: 767px) {
+  section { padding-bottom: 64px; }
+  .header-row { flex-wrap: wrap; gap: 12px; }
+  .menu-toggle:not([hidden]) { display: inline-flex; }
+  #site-menu { flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 4px; padding-block: 8px; }
+  #site-menu > a { padding-inline: 12px; }
+  #site-menu .btn-light { align-self: flex-start; }
+  .hero { padding-top: 48px; gap: 40px; }
+  .hero-copy, .hero-portrait { flex-basis: 100%; }
+  .hero-portrait { max-width: 420px; margin-inline: auto; width: 100%; }
+  .quality-report { left: 16px; right: 16px; bottom: 20px; min-width: 0; padding-inline: 12px; font-size: 12px; }
+  .quality-report span { font-size: 10px; }
+  .hero-lead { font-size: 18px; }
+  .hero-meta { gap: 12px; }
+  .panel { padding: 24px; }
+  .panel-heading { gap: 24px; margin-bottom: 28px; }
+  .principles-grid, .projects-grid, .credentials-grid, .skills-grid { grid-template-columns: minmax(0, 1fr); }
+  .principle { padding: 24px; }
+  .experience { gap: 28px; }
+  .timeline > li { padding-left: 20px; }
+  .role { padding: 20px; }
+  .role-bottom { align-items: start; flex-direction: column; }
+  .tags { flex-basis: auto; }
+  .contact-panel { gap: 32px; }
+  .email-link { font-size: 14px; gap: 8px; }
+  .footer-top, footer nav { gap: 28px; }
+  .checks-badge { font-size: 10px; }
+}
+[hidden] { display: none !important; }
