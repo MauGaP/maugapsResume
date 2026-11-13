@@ -1,12 +1,17 @@
 {
   "name": "maugapsresume",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mauro Pedano’s static portfolio and CV",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
   },
   "author": "MauGaP",
   "license": "ISC",
-  "dependencies": {}
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "lighthouse": "^13.6.0"
+  }
 }
