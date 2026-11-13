@@ -64,7 +64,7 @@ section { padding-block: 32px 96px; }
 .header-row, #site-menu { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .header-row { padding-block: 14px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font: 600 17px var(--font-display); text-decoration: none; white-space: nowrap; }
-.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; background: var(--accent); color: var(--bg); border-radius: 10px; font-size: 15px; font-weight: 700; }
+.brand-mark { width: 60px; height: auto; flex-shrink: 0; object-fit: contain; }
 #site-menu > a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
 #site-menu > .btn-light { color: var(--bg); font-weight: 600; }
 #site-menu > .nav-featured { color: var(--text); gap: 8px; }
