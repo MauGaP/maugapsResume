@@ -294,11 +294,11 @@ footer nav a { color: var(--text-2); font-size: 14px; text-decoration: none; min
 }
 
 /* Experience selection follows the accordion state, including after a click. */
-.role[open] {
+.card.role[open] {
   border-color: var(--accent);
   box-shadow: 0 0 0 1px rgba(255, 59, 71, .22), 0 0 24px rgba(255, 59, 71, .18);
 }
-.role:not([open]) {
+.card.role:not([open]) {
   border-color: var(--border);
   box-shadow: none;
 }
